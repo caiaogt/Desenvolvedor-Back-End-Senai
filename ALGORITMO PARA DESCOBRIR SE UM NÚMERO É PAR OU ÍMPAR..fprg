@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DevBackEnd2s24"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-07-27 02:16:34 "/>
+        <attribute name="created" value="RGV2QmFja0VuZDJzMjQ7REVTS1RPUC0zSDdRUjlPOzIwMjQtMDctMjc7IjEyOjMwOjQ0ICI7MzQ1NQ=="/>
+        <attribute name="edited" value="RGV2QmFja0VuZDJzMjQ7REVTS1RPUC0zSDdRUjlPOzIwMjQtMDctMjc7IjAyOjE2OjM0ICI7MjszNTY2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num1" type="Real" array="False" size=""/>
+            <comment text="valor a ser analizado"/>
+            <output expression="&quot;escreva o primeiro numero:&quot;" newline="True"/>
+            <input variable="num1"/>
+            <comment text="armazenar o numero dito pelo usuario"/>
+            <if expression="num1 % 2 = 0">
+                <then>
+                    <output expression="&quot;numero par&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;numero impar&quot;" newline="True"/>
+                </else>
+            </if>
+            <comment text="ira informar se o numero &#233; par ou impar"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DevBackEnd2s24"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-07-27 02:15:40 "/>
+        <attribute name="created" value="RGV2QmFja0VuZDJzMjQ7REVTS1RPUC0zSDdRUjlPOzIwMjQtMDctMjc7IjAyOjA5OjIyICI7MzQ1Ng=="/>
+        <attribute name="edited" value="RGV2QmFja0VuZDJzMjQ7REVTS1RPUC0zSDdRUjlPOzIwMjQtMDctMjc7IjAyOjE1OjQwICI7MTszNTYx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nota1" type="Real" array="False" size=""/>
+            <output expression="&quot;digite a nota do aluno:&quot;" newline="True"/>
+            <comment text="digitar nota do aluno, para saber se esta aprovado, se ira para o conselho ou sera reprovado"/>
+            <input variable="nota1"/>
+            <if expression="nota1 &gt;= 50">
+                <then>
+                    <comment text="ira verificar se a nota1 &#233; maior que 50"/>
+                    <output expression="&quot;aprovado&quot;" newline="True"/>
+                </then>
+                <else>
+                    <comment text="ira verificar ser for menor que 50"/>
+                    <if expression="nota1 &lt;=49 and nota1 &gt;=45">
+                        <then>
+                            <output expression="&quot;aluno ira para o conselho&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <comment text="ira veriicar se a nota foi menor que 45"/>
+                            <output expression="&quot;reprovado&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
