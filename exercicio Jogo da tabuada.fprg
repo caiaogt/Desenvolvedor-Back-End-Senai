@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="caiov"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-08-02 09:43:32 "/>
+        <attribute name="created" value="Y2Fpb3Y7Q0FJTy1QQzsyMDI0LTA3LTI4OyIwNTowNTowNiAiOzIyMDI="/>
+        <attribute name="edited" value="Y2Fpb3Y7Q0FJTy1QQzsyMDI0LTA4LTAyOyIwOTo0MzozMiAiOzY7MjMxMw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num1, num2, resultado, pontos" type="Real" array="False" size=""/>
+            <assign variable="num1" expression="random(10)"/>
+            <assign variable="num2" expression="random(10)"/>
+            <comment text="declarei as variaveis num1 e num2 com numeros aleatorios (random)"/>
+            <assign variable="pontos" expression="0"/>
+            <comment text="Tamb&#233;m declaro uma vari&#225;vel para um sistema de pontos. Toda vez que o usu&#225;rio acertar uma resposta, ele recebe um ponto."/>
+            <assign variable="resultado" expression="num1*num2"/>
+            <comment text="variavel resultado recebe num1 x num2 para que possa entra no  while"/>
+            <output expression="&quot;Bem-vindo ao Desafio da Tabuada!&quot;" newline="True"/>
+            <while expression="resultado == num1*num2">
+                <assign variable="num2" expression="random(10)"/>
+                <assign variable="num1" expression="random(10)"/>
+                <comment text="Declaro novamente as vari&#225;veis num1 e num2 para que, toda vez que o usu&#225;rio acerte um resultado, uma nova conta seja gerada."/>
+                <output expression="num1&amp;&quot;*&quot;&amp;num2&amp;&quot;: &quot;" newline="True"/>
+                <comment text="Mostro ao usu&#225;rio a conta com n&#250;meros aleat&#243;rios."/>
+                <input variable="resultado"/>
+                <comment text="Estou usando uma estrutura se para que o usu&#225;rio receba a pontua&#231;&#227;o em caso de resposta correta."/>
+                <if expression="resultado==num1*num2">
+                    <then>
+                        <assign variable="pontos" expression="pontos+1"/>
+                    </then>
+                    <else/>
+                </if>
+                <comment text="O loop `while` verificar&#225; se o resultado est&#225; correto. Se n&#227;o estiver, o jogo se encerra; caso esteja certo, o jogo continua."/>
+            </while>
+            <output expression="&quot;GAME OVER!&quot;" newline="True"/>
+            <output expression="&quot;Pontua&#231;&#227;o final: &quot;&amp;pontos" newline="True"/>
+            <output expression="&quot;FIM DE JOGO OBRIGADO POR JOGAR&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

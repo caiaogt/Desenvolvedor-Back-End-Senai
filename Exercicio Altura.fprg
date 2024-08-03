@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="caiov"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-08-02 09:58:31 "/>
+        <attribute name="created" value="Y2Fpb3Y7Q0FJTy1QQzsyMDI0LTA4LTAxOyIwNDo0NDo1MyAiOzIxOTg="/>
+        <attribute name="edited" value="Y2Fpb3Y7Q0FJTy1QQzsyMDI0LTA4LTAyOyIwOTo1ODozMSAiOzM7MjMxNQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="alturamaior, alturamenor, i, altura1, somaaltura, mediaaltura" type="Real" array="False" size=""/>
+            <comment text="Declarando as vari&#225;veis antes de come&#231;ar o loop."/>
+            <assign variable="i" expression="1"/>
+            <comment text="Declarei a vari&#225;vel i com o valor 1 para que eu possa controlar o n&#250;mero de itera&#231;&#245;es do loop."/>
+            <assign variable="somaaltura" expression="0"/>
+            <comment text="Declarei a vari&#225;vel somaAltura como 0 para acumular a soma de todas as alturas."/>
+            <assign variable="alturamenor" expression="3"/>
+            <comment text="Declarei a vari&#225;vel menorAltura com o valor 3 para que ela possa ser atualizada com a menor altura digitada pelo usu&#225;rio."/>
+            <assign variable="alturamaior" expression="0"/>
+            <comment text="Declarei a vari&#225;vel maiorAltura com o valor 0 para que ela possa ser atualizada com a maior altura digitada pelo usu&#225;rio.&#13;&#10;"/>
+            <comment text="Declarei as vari&#225;veis menorAltura e maiorAltura com os valores 0 e 3, respectivamente, para que, ao comparar na fun&#231;&#227;o if, o resultado seja verdadeiro e as vari&#225;veis sejam atualizadas com a menor e maior altura corretas."/>
+            <for variable="i" start="1" end="10" direction="inc" step="1">
+                <comment text="Inicie o loop, permitindo que o usu&#225;rio digite n&#227;o s&#243; a primeira altura, mas tamb&#233;m as demais alturas"/>
+                <output expression="&quot;digite a altura: &quot;" newline="True"/>
+                <input variable="altura1"/>
+                <comment text="Logo ap&#243;s o usu&#225;rio digitar a altura, o algoritmo verificar&#225; as seguintes condi&#231;&#245;es:"/>
+                <comment text="Se a altura digitada for maior que a &#250;ltima altura registrada, e como a vari&#225;vel foi inicialmente declarada como 0, a primeira altura digitada ser&#225; considerada verdadeira na condi&#231;&#227;o if."/>
+                <if expression="altura1 &gt; alturamaior">
+                    <then>
+                        <assign variable="alturamaior" expression="altura1"/>
+                    </then>
+                    <else/>
+                </if>
+                <comment text="Se a altura digitada for menor que a &#250;ltima altura registrada e a vari&#225;vel foi inicialmente declarada como 3, a primeira altura digitada ser&#225; considerada como a menor altura na condi&#231;&#227;o if."/>
+                <if expression="altura1 &lt; alturamenor">
+                    <then>
+                        <assign variable="alturamenor" expression="altura1"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="somaaltura" expression="altura1+somaaltura"/>
+                <comment text="Na declara&#231;&#227;o das vari&#225;veis, inclua uma vari&#225;vel para somar as alturas digitadas, o que permitir&#225; calcular a m&#233;dia posteriormente."/>
+            </for>
+            <comment text="Na declara&#231;&#227;o das vari&#225;veis, adicione uma vari&#225;vel para somar as alturas digitadas, possibilitando o c&#225;lculo da m&#233;dia posteriormente."/>
+            <assign variable="mediaaltura" expression="somaaltura/10"/>
+            <output expression="&quot;maior altura digitada: &quot;&amp;alturamaior&amp;&quot; menor altura digitada: &quot;&amp;alturamenor&amp;&quot; media de altura: &quot;&amp;mediaaltura" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
