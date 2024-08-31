@@ -1,0 +1,26 @@
+[
+  {
+    "id": 2,
+    "produto": "cheetos",
+    "estoque": 20,
+    "status": 0
+  },
+  {
+    "id": 3,
+    "produto": "torcida",
+    "estoque": 30,
+    "status": 0
+  },
+  {
+    "id": 4,
+    "produto": "pipoca nhac",
+    "estoque": 20,
+    "status": 0
+  },
+  {
+    "id": 5,
+    "produto": "trakinas",
+    "estoque": 20,
+    "status": 0
+  }
+]
